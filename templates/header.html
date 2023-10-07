@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    /* {% comment %} <link rel="stylesheet" href="/static/header.css"> {% endcomment %} */
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: 700;
+            
+        } */
+        body{
+            background-image: linear-gradient(rgb(35, 216, 104) 25%,white 50%);
+            background-color: #40E0D0;
+        }
+        .main{
+            height: 5vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            color: rgb(12, 0, 0);
+            justify-content: space-between;
+        }
+        a{
+            text-decoration:none;
+            color:rgb(0, 0, 0);
+            font-family: cursive;
+            font-weight: 900;
+            font-size: 25px;
+            list-style: none;
+        }
+        a:hover{
+            font-weight:900;
+            font-style:italic;
+            font-size:30px;
+        }
+        li{
+            list-style:none;
+        }
+        .active a{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+        <li class="{% if request.path == "/home/" %}active {% endif %}"><a  href="/home">HOME</a></li>
+        <li class="{% if request.path == "/contact/" %}active {% endif %}"><a  href="/contact">CONTACT US</a></li>
+        <li class="{% if request.path == "/courses/" %}active {% endif %}"><a  href="">COURSES</a></li>
+        <li class="{% if request.path == "/about/" %}active {% endif %}"><a  href="/about">ABOUT US</a></li>
+        <li class="{% if request.path == "/form/" %}active {% endif %}"><a  href="/form">SIGN-UP/LOG-IN</a></li>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+        <body>
+            <!-- {% with name='harsh'%}
+            <h1>hey {{name}}</h1>
+            {%endwith%} -->
+            {%for i in course %}
+            <div>{{forloop.counter}}. <b>{{i}}</b></div>
+            {%endfor%}
+            {%for i in nums%}
+            {%if {{i}} > 90%}
+            {{i}}
+            {%endif%}
+            {%endfor%}
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>Name</th>
+                    <th>Clas</th>
+                    <th>Roll</th>
+                </tr>
+
+
+                {%for d in details%}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.class}}</td>
+                    <td>{{d.Rollno}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+
+            
+
+            
+
+            
+        </body>
+    </html>         
